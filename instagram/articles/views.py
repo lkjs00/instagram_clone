@@ -17,7 +17,6 @@ def create(request):
         form = ArticleForm(request.POST)
         if form.is_valid():
             article = form.save()
-            messages.success(request, '글 작성이 완료되었습니다.')
             return redirect('articles:index')
         messages.warning(request, '폼을 확인 후 제출해주세요.')
     else:
