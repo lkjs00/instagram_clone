@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ article.pk }}번 글{% endblock %}
+
+{% block content %}
+    <h1>{{ article.pk }}번 글</h1>
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.content }}</p>
+{% endblock %}
