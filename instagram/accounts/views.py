@@ -8,7 +8,7 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect()
+            return redirect('articles:index')
     else:
         form = UserCreationForm()
     context = {
